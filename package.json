@@ -10,6 +10,7 @@
     "url": "https://github.com/contentful/field-editors"
   },
   "scripts": {
+    "preinstall": "yarn build",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
     "build": "lerna run --concurrency 1 --stream build",
