@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { MultipleEntryReferenceEditor } from '../../../packages/reference/src/index';
+import { MultipleEntryReferenceEditor } from './components/MultipleEntryReferenceEditor';
 import { init, FieldExtensionSDK } from 'contentful-ui-extensions-sdk';
 import '@contentful/forma-36-react-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
@@ -13,7 +13,7 @@ init<FieldExtensionSDK>((sdk) => {
   render(
     <div style={{ minHeight: 400 }}>
       <MultipleEntryReferenceEditor
-        viewType="link"
+        viewType="card"
         sdk={fieldSdk}
         isInitiallyDisabled={true}
         parameters={{

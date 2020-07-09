@@ -8,10 +8,14 @@ import {
   DropdownListItem,
   Icon,
 } from '@contentful/forma-36-react-components';
-import { Entry, File, ContentType } from '../../types';
-import { isValidImage } from '../../utils/isValidImage';
-import { entityHelpers } from '@contentful/field-editor-shared';
-import { MissingEntityCard, ScheduledIconWithTooltip, AssetThumbnail } from '../../components';
+import { Entry, File, ContentType } from '../../../../../packages/reference/src/types';
+import { isValidImage } from '../../../../../packages/reference/src/utils/isValidImage';
+import * as entityHelpers from '../../utils/entityHelpers';
+import {
+  MissingEntityCard,
+  ScheduledIconWithTooltip,
+  AssetThumbnail,
+} from '../../../../../packages/reference/src/components';
 
 const { getEntryTitle, getEntityDescription, getEntryStatus, getEntryImage } = entityHelpers;
 
@@ -96,10 +100,9 @@ export function WrappedEntryCard(props: WrappedEntryCardProps) {
     defaultLocaleCode: props.defaultLocaleCode,
   });
 
-  console.log(description);
-
   return (
     <EntryCard
+      className="my-entry-card"
       href={props.getEntryUrl ? props.getEntryUrl(props.entry.sys.id) : undefined}
       title={title}
       description={description}
