@@ -4,6 +4,7 @@
   "scripts": {
     "start": "contentful-extension-scripts start",
     "deploy": "contentful-extension-scripts build && contentful extension update --force",
+    "build": "contentful-extension-scripts build",
     "configure": "contentful space use && contentful space environment use",
     "login": "contentful login",
     "logout": "contentful logout",
